@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	
+		/* class1과 class2가 동시에 적용된 엘리먼트 선택*/
+		/*.class1.class2 { 
+			color: red;
+		}*/
+		
+		/* class1 또는 class2를 선택*/
+		/*.class1, .class2 { 
+			color: red;
+		}*/
+		
+		/* class3인 엘리먼트에 내용(class3안의 안쪽 전부라는 의미)중에서 class4가 선택*/
+		/*.class3 .class4 { 
+			color: red;
+		}*/
+		
+		/* class3인 엘리먼트에서 바로 밑의 class4 선택*/
+		.class3 > .class4 { 
+			color: red;
+		}
+		
+	</style>
+</head>
+	<body>
+		<p>this is content1</p>  <!--인라인 스타일-->
+		<p class="class1">this is content2</p>
+		<p class="class1 class2">this is content3</p> <!--클래스1에도 속하고 2에도 속한다  -->
+		<p class="class2">this is content4</p>
+		<div class="class3">
+			<p>this is content5</p>
+			<p class="class4">this is content6</p>
+			<div>
+				<p class="class4">this is content7</p>
+			</div>
+		</div>
+		<p>this is content3</p>
+	</body>
+</html>
